@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 
 const fizzBuzz = require('../fizzBuzz')
 
-describe.skip('FizzBuzz', function() {
+describe('FizzBuzz', function() {
 
   it('Should transform array with FizzBuzz', function() {
     const input = [1, 2, 3, 4, 5, 6, 7, 8, 9,
