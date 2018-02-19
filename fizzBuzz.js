@@ -7,11 +7,25 @@ const fizzBuzz = function (input) {
 
   for (let index = 0; index < input.length; index++) {
     if (input[index] % 3 === 0 && input[index] % 5 === 0) {
-      input[index] = 'FizzBuzz'
+      input[index] = {
+        value: input[index],
+        messages: ['Fizz', 'Buzz']
+      }
     } else if (input[index] % 3 === 0) {
-      input[index] = 'Fizz'
+      input[index] = {
+        value: input[index],
+        messages: ['Fizz']
+      }
     } else if (input[index] % 5 === 0) {
-      input[index] = 'Buzz'
+      input[index] = {
+        value: input[index],
+        messages: ['Buzz']
+      }
+    } else {
+      input[index] = {
+        value: input[index],
+        messages: []
+      }
     }
     
   }
