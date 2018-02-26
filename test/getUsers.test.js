@@ -23,6 +23,10 @@ describe('getUsers', function() {
 
   it('getUsers with money parameter should return filtered users', function() {
 
+    const input = function (item) {
+      return item.money > 400
+    }
+
     const output = [
       { name: "Jane", money: 500 },
       { name: "Lucy", money: 800 },
@@ -32,7 +36,7 @@ describe('getUsers', function() {
       { name: "Bob", money: 450 }
     ]
 
-    expect(getUsers(400)).to.be.eql(output);
+    expect(getUsers(input)).to.be.eql(output);
   });
 
 });
