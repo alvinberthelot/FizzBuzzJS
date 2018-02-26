@@ -9,13 +9,13 @@ const USERS = [
   { name: "Jack", money: 500 },
   { name: "Bob", money: 450 }
 ]
-const getUsers = function (predicate) {
+const getUsers = function (users, predicate) {
   if (!predicate) {
-    return USERS
-  } else {
+    return users
+  } else { 
     const output = []
-    for (let i = 0; i < USERS.length; i++) {
-      var user = USERS[i]
+    for (let i = 0; i < users.length; i++) {
+      var user = users[i]
       if (predicate(user)) {
         output.push({
           name: user.name,
